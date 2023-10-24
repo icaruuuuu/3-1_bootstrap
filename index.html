@@ -1,0 +1,382 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+<!--  <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: #fff; 
+}
+::selection{
+  background: #fff;
+  color: #fff;
+}
+.wrapper{
+  width: 370px;
+  margin-top: 5%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 10px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #365d81, #7bb8a3);
+}
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+
+}
+.wrapper form .field{
+  height: 60px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+  border-color: #4158d0;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+.btn {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -5px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #729ac0, #1c4d3c);
+  transition: all 0.3s ease;
+}
+.btn :active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color:linear-gradient(-135deg, #365d81, #6a4791);
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+</style> -->
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">E-Commerce</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </li>
+                  <li class="nav-item dropdown" hidden>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Settings
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Account Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Privacy Settings</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a hidden class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <button type="button" class="btn btn-primary position-relative">
+                    Cart
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      1
+                      <span class="visually-hidden">Item count</span>
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <br>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        <div class="card">
+            <img class="bg-secondary" src="https://p4-ofp.static.pub/fes/cms/2022/12/06/d3kftnq1r3gnfjw6o8eitcef8e0g01407329.png" alt="IdeaPad Slim 3i" style="width:100%">
+            <div class="card-body">
+            <h5 class="card-title">IdeaPad Slim 3i (14", Gen 8)</h5>
+            <p class="card-text">The smarter choice for mobility</p>    
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <p>Price:
+                <button type="button" class="btn btn-dark">₱34,994.06</button>
+                <div>
+                <button type="button" class="btn btn-outline-success">Add to cart</button>
+                <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                </p>
+                </div>
+            </div>
+            </div>
+            </div>
+        <div class="col-md-4">
+        <div class="card " >
+            <img class="bg-secondary" src="https://p4-ofp.static.pub/fes/cms/2023/04/07/let7txl98ajgmoeg4vl8wmlf8v2ro8811771.png" alt="ThinkPad T16 Gen 2" style="width:100%">
+            <div class="card-body ">
+            <h5 class="card-title">ThinkPad T16 Gen 2 (16″ Intel)</h5>
+            <p class="card-text">Productivity companion everywhere & anywhere</p>
+            </div> 
+            <div class="card-footer d-flex justify-content-between">
+                <p>Price:
+                <button type="button" class="btn btn-dark">₱66,993.56</button>
+                <div>
+                <button type="button" class="btn btn-outline-success">Add to cart</button>
+                <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                </p>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+        <div class="col-md-4">
+        <div class="card">
+            <img class="bg-secondary" src="https://p2-ofp.static.pub/fes/cms/2023/04/05/w0tcj8z4uucju3a26629yu5avfjzy5086363.png" alt="ThinkPad X13 Gen 4" style="width:100%">
+            <div class="card-body">
+            <h5 class="card-title">ThinkPad X13 Gen 4 (13″ Intel)</h5>
+            <p class="card-text">Mobile power & productivity</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <p>Price:
+                <button type="button" class="btn btn-dark">₱6,995</button>
+                <div>
+                <button type="button" class="btn btn-outline-success">Add to cart</button>
+                <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><style>svg{fill:#005eff}</style><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg></button>
+                </p>
+                </div>
+            </div>
+            </div>
+            </div>  
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+<!---   <div class="wrapper">
+         <div class="title">
+            Login
+         </div>
+         <form action="#">
+            <div class="field">
+               <input type="text" required>
+               <label>Email Address</label>
+            </div>
+            <div class="field">
+               <input type="password" required>
+               <label>Password</label>
+            </div>
+            <div class="content">
+               <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+               </div>
+               <div class="pass-link">
+                  <a href="#">Forgot password?</a>
+               </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-outline-primary col-sm-6 mt-2">Login</button>
+                <a type="button" class="btn btn-outline-success col-sm-6  mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Register</a>
+     
+            </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                    <div class="modal-content ">
+                        <div class="modal-header bg-secondary">
+                        <h1 class="modal-title fs-5 " id="exampleModalLabel">Create account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-floating mb-3 ">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Email Address</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="name">
+                                <label for="floatingInput">Name</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                              </div>
+                              <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Confirm Password</label>
+                              </div>
+                              <div class="container mt-3">
+                              <div class="mt-2 row">
+                                <label for="radioGender">Gender</label>
+        
+                                <div class="form-check col-4">
+                                  <input class="form-check-input" type="radio" name="radioGender" id="flexRadioDefault1">
+                                  <label class="form-check-label" for="flexRadioDefault1">
+                                    Male
+                                  </label>
+                                </div>
+                                <div class="form-check col-4">
+                                  <input class="form-check-input" type="radio" name="radioGender" id="flexRadioDefault2">
+                                  <label class="form-check-label" for="flexRadioDefault2">
+                                    Female
+                                  </label>
+                                </div>
+                                <div class="form-check col-4">
+                                    <input class="form-check-input" type="radio" name="radioGender" id="flexRadioDefault1" checked>
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Prefer not to say
+                                    </label>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="mt-3">
+                              <div class="form-floating">
+                              <select id="floatingSelect" class="form-select" aria-label="Default select example">
+                                <option selected>Select year level...</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                              </select>
+                              <label for="floatingSelect">Year Level</label>
+                              </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="input-group">
+                              <span class="input-group-text">Address</span>
+                              <textarea class="form-control" aria-label="With textarea"></textarea>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="form-floating mb-3">
+                              <input type="date" class="form-control" id="floatingDate" placeholder="Birthdate">
+                              <label for="floatingDate">Birthdate</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer row">
+                        <button type="button" class="btn btn-danger col" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success col">Register</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </form>
+      </div> --->
+  </body>
+</html>
