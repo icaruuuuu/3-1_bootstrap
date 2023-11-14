@@ -187,19 +187,19 @@ form .signup-link a:hover{
                         </div>
                         <div class="modal-body">
                             <div class="form-floating mb-3 ">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="email" class="form-control" id="txtRegisterAddress" placeholder="name@example.com">
                                 <label for="floatingInput">Email Address</label>
                               </div>
                               <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" placeholder="name">
+                                <input type="text" class="form-control" id="txtRegisterName" placeholder="name">
                                 <label for="floatingInput">Name</label>
                               </div>
                               <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <input type="password" class="form-control" id="txtRegisterPassword" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                               </div>
                               <div class="form-floating">
-                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <input type="password" class="form-control" id="txtRegConfirmPass" placeholder="Password">
                                 <label for="floatingPassword">Confirm Password</label>
                               </div>
                               <div class="container mt-3">
@@ -241,19 +241,19 @@ form .signup-link a:hover{
                           <div class="mt-3">
                             <div class="input-group">
                               <span class="input-group-text">Address</span>
-                              <textarea class="form-control" aria-label="With textarea"></textarea>
+                              <textarea id="txtAdd" class="form-control" aria-label="With textarea"></textarea>
                             </div>
                           </div>
                           <div class="mt-3">
                             <div class="form-floating mb-3">
-                              <input type="date" class="form-control" id="floatingDate" placeholder="Birthdate">
+                              <input type="date" class="form-control" id="txtRegisterBirthdate" placeholder="Birthdate">
                               <label for="floatingDate">Birthdate</label>
                             </div>
                           </div>
                         </div>
                         <div class="modal-footer row">
-                        <button type="button" class="btn btn-danger col" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success col">Register</button>
+                        <button type="button" class="btn btn-danger col" id="btnClose" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success col " id="btnRegister">Register</button>
                         </div>
                     </div>
                     </div>
@@ -261,4 +261,7 @@ form .signup-link a:hover{
             </form>
       </div>
    </body>
+   <footer>
+    <script src="./index.js"></script>
+   </footer>
 </html>
